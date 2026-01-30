@@ -34,7 +34,9 @@ export default function Home() {
   };
 
   const handleUrlChange = (event: React.FormEvent<HTMLInputElement>) => {
-    setUrl(event.currentTarget.value);
+    if (event.currentTarget?.value) {
+      setUrl(event.currentTarget.value);
+    }
   };
 
   const generateRandom = () => {
